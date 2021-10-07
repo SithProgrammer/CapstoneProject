@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterForm.Master.cs" Inherits="CapstoneGroup6WebPage.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Capstone Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="Scripts/jquery-2.2.4.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="headPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container" id="masterForm">
+        <form runat="server">
+            <%--Page Header--%>
+            <header class="jumbotron">
+                <h1>HCA HealthCare</h1>
+                <h2>CCPA Compliance Log</h2>
+            </header>
+            <div>
+                <%--Page content--%>
+                <asp:ContentPlaceHolder ID="mainPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </div>
+    <%--Page Footer area--%>
+    <asp:ContentPlaceHolder ID="footerPlaceHolder" runat="server">
+        <div class="form-horizontal container row " id="spFooter">
+            <div id="footerCaption" class="col-md-12 form-group text-center">
+                <asp:Label ID="lblFooter" runat="server"
+                    Text="Capstone Group 6 &nbsp;&nbsp;&nbsp; Final Project Web Page &copy; 2020"
+                    Font-Size="Small" CssClass="control-label"></asp:Label>
+                <br />
+            </div>
+            <div class="col-md-12 form-group text-center">
+                <div class="ccpaHyperLinks">
+                    <a class="ccpaHyperLinks" href="https://oag.ca.gov/privacy/ccpa" target="_blank">CCPA Info</a>
+                    <a class="ccpaHyperLinks" href="https://oag.ca.gov/system/files/attachments/press_releases/CCPA%20Fact%20Sheet%20%2800000002%29.pdf" target="_blank">CCPA Fact Sheet PDF</a>
+                    <a class="ccpaHyperLinks" href="PolicyForm.aspx">Policy</a>
+                </div>
+            </div>
+        </div>
+    </asp:ContentPlaceHolder>
+</body>
+</html>
